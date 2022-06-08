@@ -3,10 +3,13 @@ import React from 'react'
 export default function Introduction() {
     return (
         <div className='profile'>
-            <div className="image-section"><img className='profileImg' src={require("./images/hej-jag.jpg")} alt="" /></div>
+            <div className="image-section"><div id='bitmap'><img className='profileImg' src={require("./images/hej-jag.jpg")} alt="" /></div></div>
             <div className="intro-section">
-                <h2>Hello!</h2>
-                <h3>My Name is Mika</h3>
+              
+                <h3>Hello, Mika here!</h3>
+                <p>Welcome to my portfolio.
+                    I am an aspiring web developer dedicated to building awesome stuff,
+                    both in frontend and backend.</p>
             </div>
         </div>
     )

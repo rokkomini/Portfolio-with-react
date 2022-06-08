@@ -13,8 +13,7 @@ body {
 
 .hero {
   background-color: #105652;
-  height: 600px;
-  border: dotted $third-color 10px;
+  height: 800px;
 }
 
 .navbar {
@@ -26,7 +25,7 @@ body {
   padding-right: 30px;
   padding-top: 15px;
   margin-bottom: 50px;
-  
+
   .logo {
     width: 15%;
   }
@@ -42,12 +41,94 @@ body {
 .profile {
   display: flex;
   padding-top: 20px;
-  color: $third-color;
- 
+  color: $fourth-color;
+  padding-left: 30px;
+  padding-right: 30px;
+  justify-content: center;
   .profileImg {
-    width: 20%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: 100% 10%;
     border-radius: 10px;
+    opacity: 80%;
+    box-shadow: 0 0 0 100px inset, 0 0 5px grey;
+    transition: box-shadow 1s;
   }
+}
+.intro-section {
+  padding: 20px;
+  max-width: 300px;
+}
+
+.profileImg::after {
+  width: 80%;
+  height: 80%;
+  display: block;
+  white-space: pre;
+  font: 15pt "sigmar one";
+  color: white;
+  border: 2px solid;
+  text-align: center;
+  /* center content using flex box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* hover out transition */
+  transition: opacity 1s 0.5s;
+}
+.profileImg:hover {
+  box-shadow: 0 0 0 5px inset, 0 0 5px grey, 0 0 10px grey inset;
+  transition: box-shadow 1s;
+}
+
+.profileImg:hover::after {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.project-section {
+  margin-top: 130px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header {
+  grid-area: header;
+}
+.project1 {
+  grid-area: project1;
+}
+
+.project2 {
+  grid-area: project2;
+}
+.project-container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "project1  project2";
+  gap: 20px;
+  border: $third-color solid;
+  background-color: white;
+  padding: 50px 100px;
+  color: $third-color;
+  text-align: center;
+  h1 {
+    margin: 0;
+  }
+}
+.project-card {
+  padding: 20px;
+  box-shadow: grey;
+  img {
+    width: 300px;
+  }
+}
+
+.footer {
+  background-color: $third-color;
+  height: 200px;
 }
 
 /* .App {
