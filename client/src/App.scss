@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;300;400&family=Poppins:wght@200;400;600&display=swap");
 
-$primary-color: #105652;
-$secondary-color: #fbf3e4;
-$third-color: #b91646;
-$fourth-color: #dfd8ca;
+$primary-color: #ffffff;
+$secondary-color: #000000;
+$third-color: #868a8b;
+$fourth-color: #494844;
 
 html,
 body {
@@ -12,7 +12,7 @@ body {
 }
 
 .hero {
-  background-color: #105652;
+  background-color: $primary-color;
   height: 800px;
 }
 
@@ -50,10 +50,11 @@ body {
     height: 300px;
     object-fit: cover;
     object-position: 100% 10%;
-    border-radius: 10px;
-    opacity: 80%;
-    box-shadow: 0 0 0 100px inset, 0 0 5px grey;
-    transition: box-shadow 1s;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    & :hover {
+      filter: none;
+    }
   }
 }
 .intro-section {
@@ -61,36 +62,11 @@ body {
   max-width: 300px;
 }
 
-.profileImg::after {
-  width: 80%;
-  height: 80%;
-  display: block;
-  white-space: pre;
-  font: 15pt "sigmar one";
-  color: white;
-  border: 2px solid;
-  text-align: center;
-  /* center content using flex box */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* hover out transition */
-  transition: opacity 1s 0.5s;
-}
-.profileImg:hover {
-  box-shadow: 0 0 0 5px inset, 0 0 5px grey, 0 0 10px grey inset;
-  transition: box-shadow 1s;
-}
-
-.profileImg:hover::after {
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-
 .project-section {
   margin-top: 130px;
   display: flex;
   justify-content: space-evenly;
+  padding-bottom: 100px;
 }
 
 .header {
@@ -114,21 +90,67 @@ body {
   padding: 50px 100px;
   color: $third-color;
   text-align: center;
+
   h1 {
     margin: 0;
   }
 }
 .project-card {
   padding: 20px;
-  box-shadow: grey;
+  box-shadow: 5px 5px 20px rgb(165, 162, 162);
   img {
     width: 300px;
+    opacity: 1;
+    height: auto;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+  }
+  &:hover .project-image {
+    opacity: 0.3;
+  }
+  &:hover .project-link-container {
+    opacity: 1;
+  }
+}
+
+.project-link-container {
+  transition: 0.5s ease;
+  opacity: 0;
+  transform: translate(50%, -250%);
+  -ms-transform: translate(50%, -250%);
+  text-align: center;
+  max-width: 150px;
+  .project-link {
+    background-color: $secondary-color;
+    color: $primary-color;
+    padding: 16px 32px;
+    a {
+      text-decoration: none;
+      color: $primary-color;
+      & ::before {
+        content: "";
+        width: 100%;
+        height: 4px;
+        border-radius: 4px;
+        background-color: red;
+        bottom: 0;
+        left: 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+      }
+      &:hover::before {
+        transform-origin: left;
+        transform: scaleX(1);
+      }
+    }
   }
 }
 
 .footer {
-  background-color: $third-color;
-  height: 200px;
+  background-color: $secondary-color;
+  color: $primary-color;
+  height: 300px;
 }
 
 /* .App {

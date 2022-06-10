@@ -11,15 +11,21 @@ export default function Projects() {
                     <img
                         className="project-image"
                         src={require("./images/project1.jpg")}
-                        alt="project one image"
+                        alt="project one"
                     />
+                    <div className='project-link-container'>
+                        <div className="project-link"><a href="#">View here</a></div>
+                    </div>
                 </div>
                 <div className="project2 project-card">
                     <img
                         className="project-image"
                         src={require("./images/project1.jpg")}
-                        alt="project two image"
+                        alt="project two"
                     />
+                     <div className='project-link-container'>
+                        <div className="project-link"><a href="#">View here</a></div>
+                    </div>
                 </div>
             </div>
         </div>
