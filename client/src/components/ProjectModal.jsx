@@ -19,9 +19,9 @@ export default function ProjectModal({ openFunction }) {
 
     return (
         <div>
-            <button onClick={openModal}>Click to open</button>
+            <button className='project-link' onClick={openModal}>Click to open</button>
             <Modal isOpen={modalOpen}>
-                <div>
+                <div className='modalContainer'>
                     <div className='closeDiv'><FiX style={{ cursor: 'pointer' }} onClick={closeModal}/></div>
                     <div className='modalInfo'>
                         <h3>
@@ -29,7 +29,7 @@ export default function ProjectModal({ openFunction }) {
                         </h3>
                         <h4>Underrubrik</h4>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis officiis, molestiae ipsum dolorum pariatur aliquam in, aliquid magni aperiam quaerat vitae voluptatum nemo nesciunt doloremque iste obcaecati perspiciatis recusandae adipisci.</p>
-                        <div>Bilder</div>
+                        <div className='modalImages'><img src="" alt="" /> <img src="" alt="" /></div>
                     </div>
                     
                     

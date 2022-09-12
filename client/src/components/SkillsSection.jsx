@@ -12,12 +12,18 @@ export default function SkillsSection() {
                         <li>HTML</li>
                         <li>CSS</li>
                         <li>Javascript</li>
-                        <li>Typescript</li>
+
                     </ul>
                 </div>
                 <div>
                     <ul>
+                        <li>Typescript</li>
                         <li>React</li>
+                        <li>Git</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
                         <li>Node.js</li>
                         <li>Express</li>
                         <li>EJS</li>
@@ -27,8 +33,9 @@ export default function SkillsSection() {
                     <ul>
                         <li>MongoDB</li>
                         <li>MySql</li>
-                        <li>Git</li>
+
                     </ul>
+
                 </div>
             </div>
         </div>
