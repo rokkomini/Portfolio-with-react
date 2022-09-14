@@ -25,7 +25,6 @@ body {
   padding-right: 30px;
   padding-top: 15px;
   margin-bottom: 50px;
-
   .logo {
     width: 15%;
   }
@@ -51,6 +50,35 @@ body {
   }
 }
 
+.hamburger {
+  display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+.hamburger {
+  display: block;
+  border: 0;
+  background-color: transparent;
+  color: $third-color;
+  font-size: 30px;
+  margin: 20px;
+  align-self: flex-end;
+  &:hover {
+    color: yellow;
+  }
+}
+
+.navbar {
+  ul{
+    display: none;
+    .show {
+      display: block;
+    }
+  }
+}
+  
+}
+
 .profile {
   display: flex;
   padding-top: 20px;
@@ -58,12 +86,14 @@ body {
   padding-left: 30px;
   padding-right: 30px;
   justify-content: center;
+  align-items: center;
   .profileImg {
     width: 300px;
     height: 300px;
     object-fit: cover;
     object-position: 100% 10%;
     border-radius: 50%;
+    margin: 30px;
     filter: grayscale(100%);
     & :hover {
       filter: none;
@@ -72,6 +102,7 @@ body {
 }
 .intro-section {
   padding: 20px;
+  margin: 30px;
   max-width: 300px;
   h1 {
     color: yellow;
@@ -84,20 +115,31 @@ body {
   }
 }
 
+@media only screen and (max-width: 1000px) {
+ .profile{
+  flex-direction: column;
+ }
+ .intro-section{
+  margin-top: -30px;
+ }
+    
+  }
+
 .skillSection {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: yellow;
   margin-top: 10px;
+  padding-bottom: 175px;
 }
 
 .listedSkills {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 10px;
-  width: 500px;
-  font-size: larger;
+  width: 800px;;
+  font-size: 25px;
   div {
     ul {
       li {
@@ -109,8 +151,17 @@ body {
   }
 }
 
+@media only screen and (max-width: 1000px) {
+.listedSkills {
+  display: flex;
+ flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+    
+  }
 .project-section {
-  margin-top: 50px;
+  margin-top: -150px;
   display: flex;
   justify-content: space-evenly;
   padding-bottom: 100px;
@@ -142,6 +193,14 @@ body {
     margin: 0;
   }
 }
+
+@media only screen and (max-width: 1000px) {
+ .project-container {
+  display: flex;
+  flex-direction: column;
+ }
+    
+  }
 .project-card {
   padding: 20px;
   box-shadow: 5px 5px 20px rgb(165, 162, 162);
@@ -208,22 +267,6 @@ body {
   }
 }
 
-/* a ::before {
-  content: "";
-  width: 100%;
-  height: 4px;
-  border-radius: 4px;
-  background-color: red;
-  bottom: 0;
-  left: 0;
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: transform 0.3s ease-in-out;
-}
-a:hover::before {
-  transform-origin: left;
-  transform: scaleX(1);
-} */
 
 .footer {
   background-color: $secondary-color;
@@ -241,42 +284,17 @@ a:hover::before {
   }
 }
 
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media only screen and (max-width: 1000px) {
+ .footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  height: 200px;
+  div {
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+    display: flex;
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+ }
+    
   }
-}
- */
