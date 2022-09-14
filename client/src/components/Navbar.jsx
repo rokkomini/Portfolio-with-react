@@ -24,9 +24,9 @@ export default function Navbar() {
                     <li><a href="https://www.linkedin.com/in/mika-h%C3%A4gerstr%C3%B6m-9247b8157/"><SiLinkedin /></a></li>
                     <li><a href="https://github.com/rokkomini"><SiGithub /></a></li>
                 </ul>
-                <button class="hamburger" id="hamburger" onCLick={toggleHamburger}>
+                {/* <button class="hamburger" id="hamburger" onCLick={toggleHamburger}>
                     <HiMenu />
-                </button>
+                </button> */}
                 
             </div>
         </div>

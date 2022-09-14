@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import ProjectModal from './ProjectModal'
+import { projects } from './data/projects'
 
 export default function Projects() {
     const [modalOpen, setModalOpen] = useState(false)
@@ -23,16 +24,7 @@ export default function Projects() {
                         <ProjectModal />
                     </div>
                 </div>
-                <div className="project2 project-card">
-                    <img
-                        className="project-image"
-                        src={require("./images/project1.jpg")}
-                        alt="project two"
-                    />
-                     <div className='project-link-container'>
-                        <div className="project-link"><a href="#">View here</a></div>
-                    </div>
-                </div>
+               
             </div>
         </div>
     )

@@ -13,7 +13,6 @@ function App() {
       <Introduction />
       <SkillsSection />
       <Projects />
-
       <Footer />
     </div>
   );

@@ -33,7 +33,6 @@ export default function SkillsSection() {
                     <ul>
                         <li>MongoDB</li>
                         <li>MySql</li>
-
                     </ul>
 
                 </div>
