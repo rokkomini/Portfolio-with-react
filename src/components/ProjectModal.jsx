@@ -3,12 +3,12 @@ import { useState } from 'react'
 import Modal from 'react-modal'
 import { FiX } from "react-icons/fi";
 import { projects } from './data/projects';
+import parse from 'html-react-parser';
 
 
 export default function ProjectModal({ openFunction }) {
 
     const [modalOpen, setModalOpen] = useState(false)
-    const [image, setImage] = useState()
 
     function openModal() {
         setModalOpen(true)
@@ -32,7 +32,7 @@ export default function ProjectModal({ openFunction }) {
                             {projects.name}
                         </h3>
                         <h4>A todo application</h4>
-                        <p>{projects.paragraph}</p>
+                        <p>{parse(projects.paragraph)}</p>
                         <div className='modalImages'>
                             {projects.images.map((imgs, index) => (
                                 <img key={index} src={require (`${imgs.url}`)} alt={`'${imgs.alt}'`} />
