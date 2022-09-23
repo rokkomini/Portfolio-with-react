@@ -11,15 +11,15 @@ export default function SkillsSection() {
                     <ul>
                         <li>HTML</li>
                         <li>CSS</li>
-                        <li>Javascript</li>
-
+                        <li>SCSS</li>
                     </ul>
                 </div>
                 <div>
                     <ul>
-                        <li>Typescript</li>
+                        <li>JavaScript</li>
+                        <li>TypeScript</li>
                         <li>React</li>
-                        <li>Git</li>
+
                     </ul>
                 </div>
                 <div>
@@ -33,6 +33,7 @@ export default function SkillsSection() {
                     <ul>
                         <li>MongoDB</li>
                         <li>MySql</li>
+                        <li>Git</li>
                     </ul>
 
                 </div>
