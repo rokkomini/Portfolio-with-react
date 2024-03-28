@@ -8,33 +8,31 @@ export default function SkillsSection() {
             </div>
             <div className='listedSkills'>
                 <div>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>SCSS</li>
-                    </ul>
-                </div>
-                <div>
-                    <ul>
-                        <li>JavaScript</li>
-                        <li>TypeScript</li>
-                        <li>React</li>
 
-                    </ul>
+                        <p>HTML</p>
+                        <p>CSS</p>
+                        <p>SCSS</p>
+
                 </div>
                 <div>
-                    <ul>
-                        <li>Node.js</li>
-                        <li>Express</li>
-                        <li>EJS</li>
-                    </ul>
+            
+                        <p>JavaScript</p>
+                        <p>TypeScript</p>
+                        <p>Node.Js</p>
+       
                 </div>
                 <div>
-                    <ul>
-                        <li>MongoDB</li>
-                        <li>MySql</li>
-                        <li>Git</li>
-                    </ul>
+  
+                        <p>React</p>
+                        <p>Vue</p>
+                        <p>Twig (PHP template)</p>
+
+                </div>
+                <div>
+                    
+                        <p>MongoDB</p>
+                        <p>Git</p>
+                 
 
                 </div>
             </div>

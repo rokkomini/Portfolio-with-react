@@ -2,11 +2,10 @@ import React from 'react'
 import { useState } from 'react'
 import Modal from 'react-modal'
 import { FiX } from "react-icons/fi";
-import { projects } from './data/projects';
 import parse from 'html-react-parser';
 
 
-export default function ProjectModal({ openFunction }) {
+export default function ProjectModal({ openFunction, project }) {
 
     const [modalOpen, setModalOpen] = useState(false)
 
@@ -14,12 +13,9 @@ export default function ProjectModal({ openFunction }) {
         setModalOpen(true)
     }
 
-
     function closeModal() {
         setModalOpen(false)
     }
-
-  
 
     return (
         <div>
@@ -29,15 +25,13 @@ export default function ProjectModal({ openFunction }) {
                     <div className='closeDiv'><FiX style={{ cursor: 'pointer' }} onClick={closeModal} /></div>
                     <div className='modalInfo'>
                         <h3>
-                            {projects.name}
+                            {project.name}
                         </h3>
-                        <h4>A todo application</h4>
-                        <p>{parse(projects.paragraph)}</p>
+                        <h4>{project.name}</h4>
+                        <p>{parse(project.about)}</p>
                         <div className='modalImages'>
-                            {projects.images.map((imgs, index) => (
-                                <img key={index} src={require (`${imgs.url}`)} alt={`'${imgs.alt}'`} />
-
-
+                            {project.images.map((imgs, index) => (
+                                <img key={index} src={require(`${imgs.url}`)} alt={`'${imgs.alt}'`} />
                             ))}
                         </div>
                     </div>

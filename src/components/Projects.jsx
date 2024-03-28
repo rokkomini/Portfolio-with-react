@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import ProjectModal from './ProjectModal'
 import { projects } from './data/projects'
+import ProjectCard from './ProjectCard'
 
 export default function Projects() {
     const [modalOpen, setModalOpen] = useState(false)
@@ -14,17 +15,7 @@ export default function Projects() {
                 <div className="header">
                     <h1>Selected projects</h1>
                 </div>
-                <div className="project1 project-card">
-                    <img
-                        className="project-image"
-                        src={require("./images/Todos-portfolio/dashboard-small.PNG")}
-                        alt="project one"
-                    />
-                    <div className='project-link-container'>
-                        <ProjectModal />
-                    </div>
-                </div>
-               
+                <div className="projects-preview">{projects && projects.map(p =>  <ProjectCard project={p} key={p.name}/> )}</div>
             </div>
         </div>
     )
