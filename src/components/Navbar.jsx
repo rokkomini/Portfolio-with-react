@@ -2,18 +2,14 @@ import React, { useState } from 'react'
 import { SiMaildotru, SiLinkedin, SiGithub } from "react-icons/si";
 import { HiMenu } from "react-icons/hi";
 
-
-
 export default function Navbar() {
-
     const [showNav, setShowNav] = useState(false)
 
-    function toggleHamburger(){
+    function toggleHamburger() {
         setShowNav(!showNav)
-        
     }
-    return (
 
+    return (
         <div className='navbar'>
             <div className="header">
                 <img className='logo' src={require("./images/logo2.png")} alt="logo" />
@@ -27,7 +23,7 @@ export default function Navbar() {
                 {/* <button class="hamburger" id="hamburger" onCLick={toggleHamburger}>
                     <HiMenu />
                 </button> */}
-                
+
             </div>
         </div>
 

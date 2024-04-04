@@ -19,16 +19,16 @@ export default function ProjectModal({ openFunction, project }) {
 
     return (
         <div>
-            <button className='project-link' onClick={openModal}>Click to open</button>
+            <button className='project-link' onClick={openModal}>See project</button>
             <Modal isOpen={modalOpen}>
                 <div className='modalContainer'>
                     <div className='closeDiv'><FiX style={{ cursor: 'pointer' }} onClick={closeModal} /></div>
                     <div className='modalInfo'>
-                        <h3>
+                        <h2>
                             {project.name}
-                        </h3>
-                        <h4>{project.name}</h4>
+                        </h2>
                         <p>{parse(project.about)}</p>
+                        <p></p>
                         <div className='modalImages'>
                             {project.images.map((imgs, index) => (
                                 <img key={index} src={require(`${imgs.url}`)} alt={`'${imgs.alt}'`} />
