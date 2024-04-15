@@ -5,23 +5,28 @@
   position: fixed;
   z-index: 5;
   top: 0;
-  left: 400px;
-
+  left: 500px;
   transition: 0.5s ease-in-out;
   overflow-x: hidden;
 
   & .navbar {
     position: fixed;
+    overflow: hidden;
+    padding: 10px;
   }
 
   &.active {
     width: 100%;
     left: 0;
-
     transition: left 0.5s ease-in-out;
 
+    .profile {
+      position: absolute;
+    }
+
     & .navbar {
-      position: relative;
+      position: relative !important;
+      background-color: $accent-color;
     }
   }
 }

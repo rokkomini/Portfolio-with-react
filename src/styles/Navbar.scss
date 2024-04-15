@@ -5,13 +5,20 @@
   position: fixed;
   top: 0;
   overflow: hidden;
-  z-index: 99;
+  z-index: 95;
   justify-content: center;
   padding: 10px;
+  transform: translateX(0);
+  transition: transform 1s ease-in-out;
 
   @include medium-breakpoint {
     flex-direction: row;
     width: 100%;
+  }
+
+  &.active-nav {
+    transform: translateX(100%);
+    transform-origin: transform 1s ease-in-out;
   }
 
   &.collapsed {
@@ -51,9 +58,15 @@
     z-index: 5;
     position: relative;
     transition: 0.5s ease-in-out;
+    overflow: hidden;
 
     ul {
       display: flex;
+      flex-direction: column;
+      
+      @include medium-breakpoint {
+        flex-direction: row;
+      }
 
       li {
         margin-right: 10px;
@@ -62,10 +75,11 @@
         a {
           text-decoration: none;
           color: #000000;
+          font-size: 30px;
 
           svg {
-            height: 3em;
-            width: 3em;
+            height: 2em;
+            width: 2em;
 
             :hover {
               color: $accent-color;
@@ -73,12 +87,11 @@
           }
 
         }
-    .show-large {
-
           .show-small {
             transition: 0.5s ease-in-out;
+
           }
-        }
+        
 
 
       }

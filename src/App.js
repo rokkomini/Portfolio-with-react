@@ -1,5 +1,5 @@
 import "./styles/App.scss";
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Footer from "./components/Footer";
 import Introduction from "./components/Introduction";
 import Navbar from "./components/Navbar";
@@ -9,6 +9,14 @@ import SkillsSection from "./components/SkillsSection";
 
 function App() {
   const [overlay, setOverlay] = useState(false)
+
+  const [scroll, setScroll] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 50);
+    });
+  }, []);
 
   const toggleNav = () => {
     setOverlay(!overlay)
@@ -20,7 +28,7 @@ function App() {
     <div className={overlay ? 'overlay active' : 'overlay'}/>
     <div className="hero">
       <Navbar toggleNav={toggleNav} showNav={overlay}/>
-      <Introduction />
+      <Introduction scroll={scroll} />
       <SkillsSection />
       <Projects />
       <Footer />

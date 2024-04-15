@@ -1,9 +1,10 @@
 import React from 'react'
 
-export default function Introduction() {
+export default function Introduction({scroll}) {
     return (
         <div className='profile'>
-            <div className="image-section"><div id='bitmap'><img className='profileImg' src={require("./images/jag-igen.jpg")} alt="" /></div></div>
+            <div className="image-section"><div id='bitmap'>
+                <img className={scroll ? 'profile-img scroll-img' : 'profile-img' } src={require("./images/jag-igen.jpg")} alt="" /></div></div>
             <div className="intro-section">
 
                 <h1>Hello, Mika here!</h1>
