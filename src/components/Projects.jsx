@@ -10,7 +10,7 @@ export default function Projects() {
 
   
     return (
-        <div className="project-section">
+        <div className="project-section" id='projects'>
             <div className="project-container">
                 <div className="header">
                     <h1>Selected projects</h1>

@@ -15,11 +15,13 @@ export const projects = [
   },
   {
     name: "Get Sorted - a task tracker",
-    about: `Started off as a school project to create a todo app. In the app, one can create an account
+    about: `Was aschool project, to create a todo app. In the app, one can create an account
         and sign in. When signed in you are redirected to the dashboard where you write todos, mark them as finished, delete, toggle between
-        unfinished and finished, go to details page and update your todo. <br><br> During the summer I have worked details such as
+        unfinished and finished, go to details page and update your todo. <br><br>  Last summer I added details such as
         getting a loading spinner for signing up/signing in and error handling and error messages to the client side.
         <br> <br>
+        Currently working on a new task tracker. To be shown soon.
+        <br><br>
         Created with the MERN-stack.
     `,
     github: '',

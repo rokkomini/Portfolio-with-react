@@ -1,0 +1,85 @@
+.navbar {
+  // width: 100%;
+  // max-width: 1200px;
+  color: $secondary-color;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  z-index: 99;
+  justify-content: center;
+  padding: 10px;
+
+  @include medium-breakpoint {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  &.collapsed {
+    background-color: #ffffffab;
+  }
+
+  .nav-content {
+    max-width: 1200px;
+    // position: fixed;
+  }
+
+  .logo {
+    width: 15%;
+  }
+
+  .toggleBtn {
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+
+    @media only screen and (min-width: $smBreakpoint) {
+      display: none;
+    }
+
+    svg {
+      @include medium-breakpoint {
+        display: none;
+      }
+
+      @include large-breakpoint {
+        display: none;
+      }
+    }
+  }
+
+  .link-section {
+    z-index: 5;
+    position: relative;
+    transition: 0.5s ease-in-out;
+
+    ul {
+      display: flex;
+
+      li {
+        margin-right: 10px;
+        list-style: none;
+
+        a {
+          text-decoration: none;
+          color: #000000;
+
+          svg {
+            height: 3em;
+            width: 3em;
+
+            :hover {
+              color: $accent-color;
+            }
+          }
+
+        }
+    .show-large {
+
+          .show-small {
+            transition: 0.5s ease-in-out;
+          }
+        }
+
+
+      }
+    }}}

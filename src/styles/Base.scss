@@ -1,0 +1,85 @@
+  $primary-color: #ffffff;
+$secondary-color: #000000;
+$third-color: #868a8b;
+$fourth-color: #494844;
+$accent-color: rgb(255, 77, 0);
+
+html, body {
+  // margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: $secondary-color;
+}
+
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+
+  @include large-breakpoint {
+    flex-direction: row;
+  }
+
+  &.row {
+    flex-direction: row;
+  }
+
+  &.space-between {
+    justify-content: space-between;
+  }
+
+  &.space-around {
+    justify-content: space-around;
+  }
+
+  &.center {
+    justify-content: center;
+  }
+  &.end {
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  &.align-center {
+    align-items: center;
+  }
+}
+
+.show-small {
+  @include small-breakpoint {
+    display: block;
+ }
+
+ @include medium-breakpoint {
+  display: none;
+ }
+
+  @include large-breakpoint {
+    display: none;
+  }
+}
+
+.show-large {
+  @include small-breakpoint {
+    display: none;
+  }
+
+  @include medium-breakpoint {
+    display: block;
+  }
+
+  @include large-breakpoint {
+    display: block;
+  }
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}

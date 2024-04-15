@@ -1,0 +1,157 @@
+.project-section {
+  margin-top: -150px;
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 100px;
+}
+
+.header {
+  grid-area: header;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: $third-color solid;
+  background-color: white;
+  padding: 50px 100px;
+  color: $third-color;
+  text-align: center;
+
+  .projects-preview {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+
+    @media only screen and (min-width: 700px) {
+      flex-direction: row;
+    }
+  }
+
+  h1 {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .project-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.project-card {
+  padding: 20px;
+  box-shadow: 5px 5px 20px rgb(165, 162, 162);
+
+  img {
+    width: 300px;
+    opacity: 1;
+    height: auto;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+  }
+
+  &:hover .project-image {
+    opacity: 0.3;
+  }
+
+  &:hover .project-link-container {
+    opacity: 1;
+  }
+}
+
+.project-link {
+  background-color: $secondary-color;
+  color: $primary-color;
+  padding: 15px 25px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 700px) {
+  .project-link-container {
+    transition: 0.5s ease;
+    opacity: 0;
+    transform: translate(50%, -250%);
+    -ms-transform: translate(50%, -250%);
+    text-align: center;
+    max-width: 150px;
+  
+    .project-link {
+      background-color: $secondary-color;
+      color: $primary-color;
+      padding: 15px 25px;
+      cursor: pointer;
+      font-family: "Poppins", sans-serif;
+      font-weight: bold;
+  
+      &:hover {
+        text-decoration: underline $primary-color;
+      }
+  
+      a {
+        text-decoration: none;
+        color: $primary-color;
+  
+        &:hover {
+          text-decoration: underline $primary-color;
+        }
+      }
+    }
+  }
+}
+
+.modalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .closeDiv {
+    svg {
+      height: 2em;
+      width: 2em;
+    }
+  }
+
+  .modalInfo {
+
+    .modalImages {
+      border: solid none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      margin: 20px;
+      padding-top: 20px;
+
+      img {
+        max-width: 500px;
+        transform: scale(1);
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+          transform: scale(1.5);
+          transition: all 0.5s ease-in-out;
+          z-index: 10;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .modalContainer {
+    width: 100%;
+    margin: 10px;
+
+    .modalImages {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
