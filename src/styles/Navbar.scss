@@ -1,6 +1,4 @@
 .navbar {
-  // width: 100%;
-  // max-width: 1200px;
   color: $secondary-color;
   position: fixed;
   top: 0;
@@ -27,7 +25,6 @@
 
   .nav-content {
     max-width: 1200px;
-    // position: fixed;
   }
 
   .logo {
@@ -63,7 +60,7 @@
     ul {
       display: flex;
       flex-direction: column;
-      
+
       @include medium-breakpoint {
         flex-direction: row;
       }
@@ -85,14 +82,12 @@
               color: $accent-color;
             }
           }
-
         }
-          .show-small {
-            transition: 0.5s ease-in-out;
 
-          }
-        
-
-
+        .show-small {
+          transition: 0.5s ease-in-out;
+        }
       }
-    }}}
+    }
+  }
+}

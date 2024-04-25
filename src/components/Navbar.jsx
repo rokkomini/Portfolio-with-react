@@ -13,15 +13,6 @@ export default function Navbar({ toggleNav, showNav }) {
     });
   }, []);
 
-  if (document.getElementById('navbar') && document.body) {
-    if (showNav) {
-      document.getElementById('navbar').classList.add('active-nav')
-      // document.getElementById('navbar').classList.remove('collapsed')
-    } if (!showNav) {
-      document.getElementById('navbar').classList.remove('active-nav')
-    }
-  }
-
   return (
     <div className={scroll ? 'navbar flex collapsed' : 'navbar flex'} id='navbar'>
       <div className={showNav ? 'nav-content flex column' : 'nav-content flex row'}>
@@ -29,12 +20,9 @@ export default function Navbar({ toggleNav, showNav }) {
           <img className='logo' src={require("./images/logo2.png")} alt="logo" />
         </div>
 
-        <button className={showNav ? 'hide' : 'toggleBtn show-small'} id="hamburger" onClick={toggleNav}>
+        <button className={showNav ? 'hide' : 'toggleBtn show-small'} id="hamburger" onClick={toggleNav} aria-label='open-nav'>
           <HiMenu />
         </button>
-        {/* <button className={showNav ? 'toggleBtn show-small' : 'hide'} onClick={toggleNav}>
-          <AiOutlineClose /> 
-        </button> */}
 
         <div className='link-section'>
           <div className="show-large">

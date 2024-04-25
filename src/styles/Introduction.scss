@@ -21,7 +21,7 @@
     margin: 30px;
     filter: grayscale(100%);
     transition: border-radius 0.5s ease-in-out;
-    
+
     &.scroll-img {
       border-radius: 20px;
       transition: border-radius 0.5s ease-in-out;
@@ -48,7 +48,6 @@
 
     &:hover {
       color: $primary-color;
-      // background-color: $accent-color;
       box-shadow: inset 300px 0 0 0 $accent-color;
       cursor: pointer;
     }

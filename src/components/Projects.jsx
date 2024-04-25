@@ -7,8 +7,6 @@ import ProjectCard from './ProjectCard'
 export default function Projects() {
     const [modalOpen, setModalOpen] = useState(false)
     
-
-  
     return (
         <div className="project-section" id='projects'>
             <div className="project-container">
